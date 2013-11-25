@@ -1,1 +1,2 @@
-Test project for learning JSF
+Test project for learning JSF and its implementation - Prime faces.
+
