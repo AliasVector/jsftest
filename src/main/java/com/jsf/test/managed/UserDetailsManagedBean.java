@@ -6,6 +6,7 @@
 
 package com.jsf.test.managed;
 
+import com.sun.istack.internal.NotNull;
 import java.util.Date;
 import java.util.List;
 import javax.faces.bean.ManagedBean;
@@ -19,6 +20,7 @@ import javax.faces.bean.RequestScoped;
 @RequestScoped
 public class UserDetailsManagedBean {
 
+    @NotNull
     private String firstName;
     private String lastName;
     private Date birthdate;
@@ -64,6 +66,10 @@ public class UserDetailsManagedBean {
         this.sex = sex;
     }
 
+    public Sex[] getSexValues() {
+        return Sex.values();
+    }
+    
     public int getPhoneNumber() {
         return phoneNumber;
     }
@@ -80,4 +86,9 @@ public class UserDetailsManagedBean {
         this.emails = emails;
     }
     
+    public String saveUserDatails() {
+        
+        
+        return null;
+    }
 }

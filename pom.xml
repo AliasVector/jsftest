@@ -16,8 +16,18 @@
         <jstl.version>1.2</jstl.version>
         <servlet-api>2.5</servlet-api>
         <jsp-api>2.2</jsp-api>
+
+        <primefaces.version>4.0</primefaces.version>        
     </properties>
 
+    <repositories>
+        <repository>
+            <id>prime-repo</id>
+            <name>Prime Repo</name>
+            <url>http://repository.primefaces.org</url>
+        </repository>
+    </repositories>
+ 
     <build>
         <finalName>jsftest</finalName>
         
@@ -68,7 +78,13 @@
                 <groupId>javax.servlet.jsp</groupId>
                 <artifactId>jsp-api</artifactId>
                 <version>${jsp-api}</version>
-            </dependency>        
+            </dependency>       
+            
+            <dependency>
+		<groupId>org.primefaces</groupId>
+		<artifactId>primefaces</artifactId>
+		<version>${primefaces.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>    
 
@@ -98,5 +114,9 @@
             <groupId>javax.servlet.jsp</groupId>
             <artifactId>jsp-api</artifactId>
         </dependency>        
+        <dependency>
+            <groupId>org.primefaces</groupId>
+            <artifactId>primefaces</artifactId>
+        </dependency>
     </dependencies>
 </project>
